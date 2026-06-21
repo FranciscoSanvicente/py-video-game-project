@@ -1,0 +1,28 @@
+# Entorno virtual
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Herramientas
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Datos de partida (se generan al jugar)
+scores.json
+
+# Config local de Claude Code (skills y permisos de la maquina)
+.claude/
+
+# Editor / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
