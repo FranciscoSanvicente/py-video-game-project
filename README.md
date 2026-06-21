@@ -56,12 +56,19 @@ pip install -e ".[dev]"
 
 ## Como jugar
 
-```bash
-python -m juego_memoria
+Desde la raiz del proyecto, en PowerShell, cualquiera de estas opciones:
+
+```powershell
+python main.py                       # archivo principal (se relanza solo con el .venv)
+.venv\Scripts\python.exe -m juego_memoria
+.\jugar.bat                          # lanzador (tambien sirve con doble clic)
 ```
 
+`main.py` detecta si falta Pygame y se vuelve a ejecutar automaticamente con el
+Python del entorno virtual, asi que funciona aunque uses el `python` global.
+
 - **Flechas**: cambiar dificultad · **Enter**: jugar · **P**: ver puntuaciones · **Esc**: salir.
-- En la partida, haz **clic** en una carta para destaparla.
+- En la partida, haz **clic** en una carta para destaparla (o en **Menu** para cancelar).
 
 ## Desarrollo
 
