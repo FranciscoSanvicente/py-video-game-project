@@ -12,6 +12,7 @@ from .. import configuracion as cfg
 from ..partida import Partida
 from ..puntuaciones import TablaPuntuaciones
 from ..recursos import cargar_imagenes_parejas
+from ..sonidos import Sonidos
 from . import (
     disposicion,
     estados,
@@ -39,6 +40,7 @@ class Aplicacion:
         self.fuente_sm = pygame.font.SysFont("arial", 20)
 
         self.tabla = TablaPuntuaciones()
+        self.sonidos = Sonidos()
         self.estado = estados.MENU
         self.dificultad = cfg.DIFICULTAD_PREDETERMINADA
 

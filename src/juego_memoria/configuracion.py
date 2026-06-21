@@ -13,6 +13,8 @@ from pathlib import Path
 DIRECTORIO_PAQUETE: Path = Path(__file__).resolve().parent
 # Carpeta con las imagenes que aporta el usuario (un archivo por pareja).
 DIRECTORIO_IMAGENES: Path = DIRECTORIO_PAQUETE / "recursos" / "imagenes"
+# Carpeta con los efectos de sonido (.wav).
+DIRECTORIO_SONIDOS: Path = DIRECTORIO_PAQUETE / "recursos" / "sonidos"
 # Archivo donde se guardan las puntuaciones (se crea junto a donde se ejecuta).
 ARCHIVO_PUNTUACIONES: Path = Path("puntuaciones.json")
 

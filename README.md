@@ -13,6 +13,8 @@ formar parejas; gana al emparejarlas todas. Se registran las puntuaciones
 - Medicion del desempeno por **movimientos** y **tiempo**.
 - Persistencia en `puntuaciones.json` (se actualiza automaticamente al ganar).
 - Imagenes propias para las cartas (con respaldo automatico si faltan).
+- Efectos de sonido (voltear, acierto, fallo y victoria); si no hay audio,
+  el juego sigue funcionando en silencio.
 
 ## Estructura
 
@@ -24,6 +26,7 @@ src/juego_memoria/
   puntuaciones.py     Lectura/escritura de puntuaciones y Top 5
   configuracion.py    Constantes (tamanos, colores, dificultades)
   recursos.py         Carga de imagenes con respaldo
+  sonidos.py          Efectos de sonido (tolerante a falta de audio)
   interfaz/           Interfaz Pygame dividida por pantallas
     aplicacion.py       Bucle principal y cambio de pantalla
     disposicion.py      Geometria del tablero (tamano/posicion de cartas)

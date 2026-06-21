@@ -32,11 +32,18 @@ def eventos(app, evento: pygame.event.Event) -> None:
             return
         fila, columna = celda
         resultado = app.partida.seleccionar(fila, columna)
-        if resultado == ResultadoTurno.DESAJUSTE:
+        if resultado == ResultadoTurno.PRIMERA:
+            app.sonidos.reproducir("voltear")
+        elif resultado == ResultadoTurno.DESAJUSTE:
+            app.sonidos.reproducir("fallo")
             app.desajuste_en = pygame.time.get_ticks()
-        elif resultado == ResultadoTurno.PAREJA and app.partida.ganada:
-            app.entrada_nombre = ""
-            app.estado = estados.VICTORIA
+        elif resultado == ResultadoTurno.PAREJA:
+            if app.partida.ganada:
+                app.sonidos.reproducir("victoria")
+                app.entrada_nombre = ""
+                app.estado = estados.VICTORIA
+            else:
+                app.sonidos.reproducir("acierto")
 
 
 def dibujar(app) -> None:
