@@ -16,7 +16,7 @@ dist/
 .mypy_cache/
 
 # Datos de partida (se generan al jugar)
-scores.json
+puntuaciones.json
 
 # Config local de Claude Code (skills y permisos de la maquina)
 .claude/

@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "memory-game"
+name = "juego-memoria"
 version = "0.1.0"
 description = "Juego de Memoria (busqueda de pares) en Python con Pygame"
 readme = "README.md"
@@ -16,7 +16,7 @@ dependencies = ["pygame>=2.5"]
 dev = ["pytest>=7.0", "ruff>=0.1", "mypy>=1.0"]
 
 [project.scripts]
-memory-game = "memory_game.__main__:main"
+juego-memoria = "juego_memoria.__main__:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -34,5 +34,5 @@ addopts = "-q"
 
 [tool.mypy]
 python_version = "3.10"
-packages = ["memory_game"]
+packages = ["juego_memoria"]
 ignore_missing_imports = true
